@@ -1,5 +1,4 @@
 require 'rails_helper'
-
 describe Reservation do
   let(:nyc) { City.create(name: 'NYC') }
   let(:fidi) { Neighborhood.create(name: 'Fi Di', city: nyc) }
@@ -26,11 +25,11 @@ describe Reservation do
   end
 
   it 'has a checkin time' do
-    expect(reservation.checkin).to eq(Date.parse('2014-04-25'))
+    expect(reservation.checkin).to eq('2014-04-25')
   end
 
   it 'has a checkout time' do
-    expect(reservation.checkout).to eq(Date.parse('2014-04-30'))
+    expect(reservation.checkout).to eq('2014-04-30')
   end
 
   it 'belongs to a guest' do

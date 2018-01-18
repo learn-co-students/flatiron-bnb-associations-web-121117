@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+require 'pry'
 describe User do
   let(:katie) { User.create(name: "Katie") }
 
